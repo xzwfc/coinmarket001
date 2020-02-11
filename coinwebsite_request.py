@@ -129,7 +129,11 @@ nothing added to commit but untracked files present
 > git remote add origin git @git remote add origin https://github.com/xzwfc/coinmarket001.git
 > git remote add origin https://github.com/xzwfc/coinmarket001.git
 > git push -u origin master
-> 
+
+
+  git add .
+> git commit -m"init"
+  git push -u origin master ##this is for updating
 
 
 
