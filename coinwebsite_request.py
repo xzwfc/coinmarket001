@@ -123,7 +123,7 @@ Untracked files:
 	parse.py
 
 nothing added to commit but untracked files present
-38:try1 xzw$ git config --global user.name "Chungsang Tom Lam"xzwfc"
+38:try1 xzw$ git config --global user.name “xzwfc"
 > git init
 > git add.
 > git remote add origin git @git remote add origin https://github.com/xzwfc/coinmarket001.git
