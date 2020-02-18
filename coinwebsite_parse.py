@@ -51,16 +51,18 @@ for one_file_name in glob.glob("try1/*.html"):
     currencies_table =soup.find("tbody")
     currencies_row =currencies_table.find("tr") #tr is the row
     currencies_price =currencies_row.find("td", {"class":"hot_Num"}).find("a", {"class":"cmc-link"}).text #class could help us locate by the name following it
+    
 
 # using loop for locating info from multiple rows
     currencies_table =soup.find("tbody")
     currencies_rows =currencies_table.find_all("tr")
     for r in currencies_rows:
-	    currencies_price =r.find("td", {"class":"hot_Num"}).find("a", {"class":"cmc-link"}).text
-	    currencies_market =r.find("td", {"class":"hot_Num2"}).find("a", {"class":"cmc-link2"}).text
+	    currencies_price =r.find("td", {"class":"hot_Num"}).find("a", {"class":"cmc-link"}).text.replace(",", "")
+	    currencies_market =r.find("td", {"class":"hot_Num2"}).find("a", {"class":"cmc-link2"}).text.replace(",", "")
+	    currencies_link= r.find("td", {"class":"hot_Num2"}).find("a", {"class":"cmc-link2"})["href"]
 	    print(currencies_price)
 	    print(currencies_market)
-        df=df.append({"time": scraping_time, "price":currencies_price, "market":currencies_market}, ignore_index=True)
+        df=df.append({"time": scraping_time, "price":currencies_price, "market":currencies_market, "link":currencies_link}, ignore_index=True)
 
 df.to_csv("parsed_files/dataset_names.csv")
 

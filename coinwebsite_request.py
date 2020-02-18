@@ -132,12 +132,28 @@ nothing added to commit but untracked files present
 
 
   git add .
-> git commit -m"init"
-  git push -u origin master ##this is for updating
+  git commit -m"init"
+  git push -u origin master ##these three are for updating
 
 
+##linode plan >>standard and linode 2GB
+## Root password: 64694891a
+#linode label econ498
+##SSH Access:installed in on terminal: ssh + root something
+##then on terminal, type groupadd admin; adduser michaelxing --ingroup admin; "add a unix password:" ; exit for getting back
+## "login" ssh xzwfc@"ip address"
 
+##run commands without logging in on the server: sh michaelxing@"ip address" space "ls"
+## copy all files to remote serve: cd ..; ls; scp -r try1 michaelxing@"ip address":~
 
+##on server, we need to install python: sudo apt install python3
+## always go to local file to pull documents from server: scp michaelxing@"ipaddress":~econ498/filename/html_files/* . (copy all the files)
+
+## nohup python3 ccc.py & (run in the back) 
+## cat nohup.out (
+##ps aux | grep python3 (find the initial number)
+##kill -9 "initial number" (stop the program)
+ 
 
 
 
